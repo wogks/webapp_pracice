@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+final homeUrl = Uri.parse('https://blog.codefactory.ai');
+
 class HomeScreen extends StatelessWidget {
+  WebViewController controller = WebViewController()..loadRequest(homeUrl);
+
   HomeScreen({super.key});
-  final controller = WebViewController();
 
   @override
   Widget build(BuildContext context) {
